@@ -1,7 +1,9 @@
 ## JavaScript Comment sample app
 
-### Author: Rongli (Henry) Han
-This is a pure front-end React app
+#### Author: Rongli (Henry) Han
+#### View it [[http://localhost:3000](http://localhost:3000/)] 
+
+This is a pure front-end React app. I have deployed the React App to GitHub Pages already
 
 In the project directory, you can run the app:
 1. `npm start`
