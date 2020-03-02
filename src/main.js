@@ -1,12 +1,10 @@
 import React from 'react';
 import './main.css';
 import icon from './user-icon.png';
+import { Reply } from './reply';
 import { ReplyBox } from './replyBox';
 import { AllReplies } from './allReplies';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Button from '@material-ui/core/Button';
-import TimeAgo from 'react-timeago'
+import TimeAgo from 'react-timeago';
 
 export class Main extends React.Component {
 
@@ -30,8 +28,8 @@ export class Main extends React.Component {
         this.handleClickAllReplies = this.handleClickAllReplies.bind(this);
         this.mouseEnter = this.mouseEnter.bind(this);
         this.mouseLeave = this.mouseLeave.bind(this);
-        this.upvote = this.upvote.bind(this);
-        this.downvote = this.downvote.bind(this);
+        this.upvoteEvent = this.upvoteEvent.bind(this);
+        this.downvoteEvent = this.downvoteEvent.bind(this);
     }
 
     handleClickReply() {
@@ -58,13 +56,13 @@ export class Main extends React.Component {
         });
     }
 
-    upvote() {
+    upvoteEvent() {
         this.setState({
             upvote : this.state.upvote + 1
         });
     }
 
-    downvote() {
+    downvoteEvent() {
         this.setState({
             downvote : this.state.downvote + 1
         });
@@ -85,12 +83,16 @@ export class Main extends React.Component {
                 <div className="content">
                     <p>{this.state.content}</p>
                 </div>
-                <div className="reply">
-                    <Button onClick={this.handleClickReply} style={{color: this.state.fontColor}}>REPLY</Button>
-                    <Button onClick={this.handleClickAllReplies} style={{color: this.state.fontColor}}>{this.state.replies} REPLIES</Button>
-                    <Button onClick={this.upvote} style={{color: this.state.fontColor}}><ExpandLessIcon /> {this.state.upvote}</Button>
-                    <Button onClick={this.downvote} style={{color: this.state.fontColor}}><ExpandMoreIcon /> {this.state.downvote}</Button>
-                </div>
+                <Reply
+                    fontColor={this.state.fontColor}
+                    replies={this.state.replies}
+                    upvote={this.state.upvote}
+                    downvote={this.state.downvote}
+                    upvoteEvent={this.upvoteEvent}
+                    downvoteEvent={this.downvoteEvent}
+                    handleClickReply={this.handleClickReply}
+                    handleClickAllReplies={this.handleClickAllReplies}
+                />
                 <div>
                     { this.state.isReply ? <ReplyBox /> : null }
                 </div>
