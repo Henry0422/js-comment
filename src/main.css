@@ -1,0 +1,55 @@
+.comment {
+    border-top: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 825px;
+}
+
+.user-icon {
+    border-radius: 50px;
+    height: 65px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    pointer-events: none;
+}
+
+.left-part{
+    flex-grow: 1;
+}
+
+.main-part{
+    flex-grow: 8;
+    margin-left: 20px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.status-box {
+    background-color: rgb(49,50,50);
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 5px 15px;
+    vertical-align: middle;
+}
+
+.time-ago {
+    vertical-align: middle;
+    color: grey;
+    margin-left: 5px;
+}
+
+.content {
+    font-size: 22px;
+}
