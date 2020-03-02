@@ -1,7 +1,7 @@
 import React from 'react';
 import './main.css';
 import icon from './user-icon.png';
-import { Reply } from './reply';
+import { ReplyBox } from './replyBox';
 import { AllReplies } from './allReplies';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -92,7 +92,7 @@ export class Main extends React.Component {
                     <Button onClick={this.downvote} style={{color: this.state.fontColor}}><ExpandMoreIcon /> {this.state.downvote}</Button>
                 </div>
                 <div>
-                    { this.state.isReply ? <Reply /> : null }
+                    { this.state.isReply ? <ReplyBox /> : null }
                 </div>
                 <div>
                     { this.state.isAllReplies ? <AllReplies /> : null }

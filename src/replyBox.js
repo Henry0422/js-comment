@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class Reply extends React.Component {
+export class ReplyBox extends React.Component {
     render() {
         return (
           <div className="reply">
