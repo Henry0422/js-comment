@@ -1,7 +1,7 @@
 ## JavaScript Comment sample app
 
-#### Author: Rongli (Henry) Han
-#### View it [[http://localhost:3000](http://localhost:3000/)] 
+#### Author: Henry
+#### View it [[http://localhost:5173](http://localhost:5173/)] 
 
 This is a pure front-end React app. I have deployed the React App to GitHub Pages already
 
